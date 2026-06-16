@@ -1,4 +1,7 @@
+require('dotenv').config();
 const { Client, Events, GatewayIntentBits } = require("discord.js");
+const Discortkey = process.env.DISCORD_KEY;
+
 
 const client = new Client({
   intents: [
@@ -17,5 +20,5 @@ client.on("messageCreate", (message) => {
 });
 
 client.login(
-  "",
+  Discortkey,
 );
